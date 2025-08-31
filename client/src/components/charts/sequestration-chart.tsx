@@ -8,13 +8,13 @@ export default function SequestrationChart({ data }: SequestrationChartProps) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
         <XAxis 
           dataKey="quarter" 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <YAxis 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <Tooltip 
           contentStyle={{
@@ -25,7 +25,7 @@ export default function SequestrationChart({ data }: SequestrationChartProps) {
         />
         <Bar 
           dataKey="sequestration" 
-          fill="hsl(var(--secondary))"
+          fill="#10b981"
           radius={[4, 4, 0, 0]}
         />
       </BarChart>

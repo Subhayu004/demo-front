@@ -5,9 +5,9 @@ interface ProjectChartProps {
 }
 
 const COLORS = [
-  "hsl(var(--chart-1))",
-  "hsl(var(--chart-2))",
-  "hsl(var(--chart-3))",
+  "#0ea5e9",  // blue
+  "#10b981",  // green  
+  "#f59e0b",  // amber
 ];
 
 export default function ProjectChart({ data }: ProjectChartProps) {

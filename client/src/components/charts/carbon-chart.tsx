@@ -8,13 +8,13 @@ export default function CarbonChart({ data }: CarbonChartProps) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
         <XAxis 
           dataKey="month" 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <YAxis 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <Tooltip 
           contentStyle={{
@@ -26,10 +26,10 @@ export default function CarbonChart({ data }: CarbonChartProps) {
         <Line 
           type="monotone" 
           dataKey="credits" 
-          stroke="hsl(var(--primary))" 
+          stroke="#0ea5e9" 
           strokeWidth={2}
-          dot={{ fill: "hsl(var(--primary))", strokeWidth: 2, r: 4 }}
-          activeDot={{ r: 6, stroke: "hsl(var(--primary))", strokeWidth: 2 }}
+          dot={{ fill: "#0ea5e9", strokeWidth: 2, r: 4 }}
+          activeDot={{ r: 6, stroke: "#0ea5e9", strokeWidth: 2 }}
         />
       </LineChart>
     </ResponsiveContainer>

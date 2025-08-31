@@ -25,18 +25,18 @@ export default function BiodiversityChart({ data }: BiodiversityChartProps) {
         <PolarGrid />
         <PolarAngleAxis 
           dataKey="subject" 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <PolarRadiusAxis 
           angle={90} 
           domain={[0, 100]} 
-          className="text-xs fill-muted-foreground"
+          tick={{ fill: '#64748b', fontSize: 12 }}
         />
         <Radar
           name="Biodiversity Index"
           dataKey="value"
-          stroke="hsl(var(--primary))"
-          fill="hsl(var(--primary))"
+          stroke="#0ea5e9"
+          fill="#0ea5e9"
           fillOpacity={0.2}
           strokeWidth={2}
         />
